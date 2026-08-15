@@ -1,9 +1,11 @@
-// BASE DE DATOS DE STUDIO M (Hasta 10 imágenes por producto)
+// BASE DE DATOS DE STUDIO M
+// Estado disponible: "Disponible", "Reservado" o "Vendido"
 const productos = [
   {
     id: "gorra-nike-pro",
     titulo: "Gorra Nike Pro Dri-FIT Negra",
     precio: "16.00€",
+    disponibilidad: "Disponible",
     imagenes: [
       "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800",
       "https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?w=800",
@@ -23,6 +25,7 @@ const productos = [
     id: "sudadera-vintage-adidas",
     titulo: "Sudadera Adidas Originals Retro",
     precio: "28.00€",
+    disponibilidad: "Reservado",
     imagenes: [
       "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800",
       "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800"
@@ -39,12 +42,18 @@ const productos = [
   }
 ];
 
-// Inicializar la aplicación
 document.addEventListener("DOMContentLoaded", () => {
   renderCatalogo();
+  comprobarURL();
 });
 
-// Renderiza las tarjetas en la portada
+// Función para obtener la clase CSS del badge según disponibilidad
+function getBadgeClass(estado) {
+  if (estado === "Vendido") return "badge-vendido";
+  if (estado === "Reservado") return "badge-reservado";
+  return "badge-disponible";
+}
+
 function renderCatalogo() {
   const grid = document.getElementById("grid-productos");
   grid.innerHTML = "";
@@ -54,13 +63,13 @@ function renderCatalogo() {
     card.className = "card-producto";
     card.onclick = () => verDetalle(producto.id);
 
-    // Usa la primera imagen del array como portada
     const fotoPortada = producto.imagenes[0] || 'https://via.placeholder.com/600';
+    const badgeClass = getBadgeClass(producto.disponibilidad);
 
     card.innerHTML = `
       <div class="card-img-wrapper">
         <img src="${fotoPortada}" alt="${producto.titulo}">
-        <span class="card-badge">${producto.estado}</span>
+        <span class="card-badge ${badgeClass}">${producto.disponibilidad}</span>
       </div>
       <div class="card-info">
         <h3>${producto.titulo}</h3>
@@ -75,17 +84,18 @@ function renderCatalogo() {
   });
 }
 
-// Renderiza la vista de detalle
-function verDetalle(id) {
+function verDetalle(id, actualizarURL = true) {
   const producto = productos.find((p) => p.id === id);
   if (!producto) return;
 
-  const contenedor = document.getElementById("detalle-contenido");
-  
-  // Limita el número de fotos a un máximo de 10
-  const fotosValidas = producto.imagenes.slice(0, 10);
+  if (actualizarURL) {
+    window.location.hash = `producto=${producto.id}`;
+  }
 
-  // Genera el HTML de las miniaturas
+  const contenedor = document.getElementById("detalle-contenido");
+  const fotosValidas = producto.imagenes.slice(0, 10);
+  const badgeClass = getBadgeClass(producto.disponibilidad);
+
   const htmlMiniaturas = fotosValidas.map((imgUrl, index) => `
     <img 
       src="${imgUrl}" 
@@ -99,6 +109,7 @@ function verDetalle(id) {
     <div class="galeria-seccion">
       <div class="detalle-imagen-principal">
         <img id="foto-principal-display" src="${fotosValidas[0]}" alt="${producto.titulo}">
+        <span class="card-badge ${badgeClass}">${producto.disponibilidad}</span>
       </div>
       <div class="carrusel-miniaturas">
         ${htmlMiniaturas}
@@ -106,7 +117,9 @@ function verDetalle(id) {
     </div>
 
     <div class="detalle-info">
-      <h1>${producto.titulo}</h1>
+      <div class="detalle-header">
+        <h1>${producto.titulo}</h1>
+      </div>
       <p class="precio-grande">${producto.precio}</p>
 
       <div class="specs-grid">
@@ -115,7 +128,7 @@ function verDetalle(id) {
           <strong>${producto.marca}</strong>
         </div>
         <div class="spec-item">
-          <span>Estado</span>
+          <span>Estado del producto</span>
           <strong>${producto.estado}</strong>
         </div>
         <div class="spec-item">
@@ -152,6 +165,9 @@ function verDetalle(id) {
             ? `<a href="${producto.linkVinted}" target="_blank" class="btn-marketplace btn-vinted">Comprar en Vinted</a>`
             : ""
         }
+        <button onclick="copiarEnlace()" class="btn-marketplace btn-share" id="btn-share-text">
+          🔗 Copiar enlace del producto
+        </button>
       </div>
     </div>
   `;
@@ -161,17 +177,37 @@ function verDetalle(id) {
   window.scrollTo(0, 0);
 }
 
-// Función para alternar la foto activa al presionar una miniatura
 function cambiarImagenPrincipal(url, elementoThumb) {
   document.getElementById("foto-principal-display").src = url;
-  
   document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
   elementoThumb.classList.add('active');
 }
 
-// Volver al catálogo principal
 function mostrarCatalogo() {
+  window.location.hash = "";
   document.getElementById("detalle-view").classList.add("hidden");
   document.getElementById("catalogo-view").classList.remove("hidden");
   window.scrollTo(0, 0);
 }
+
+// Función para copiar el enlace directo al producto
+function copiarEnlace() {
+  const url = window.location.href;
+  navigator.clipboard.writeText(url).then(() => {
+    const btn = document.getElementById("btn-share-text");
+    btn.innerText = "¡Enlace copiado!";
+    setTimeout(() => {
+      btn.innerText = "🔗 Copiar enlace del producto";
+    }, 2000);
+  });
+}
+
+// Cargar producto directo si entran con un enlace compartido
+function comprobarURL() {
+  const hash = window.location.hash;
+  if (hash.includes("#producto=")) {
+    const id = hash.replace("#producto=", "");
+    verDetalle(id, false);
+  }
+}
+
