@@ -2,24 +2,29 @@
 // Estado disponible: "Disponible", "Reservado" o "Vendido"
 const productos = [
   {
-    id: "gorra-nike-pro",
-    titulo: "Gorra Nike Pro Dri-FIT Negra",
-    precio: "16.00€",
+    id: "Gorra Snapback LA negra Bright Codes - Sin estrenar",
+    titulo: "Gorra Snapback LA negra Bright Codes - Sin estrenar",
+    precio: "8.00€",
     disponibilidad: "Disponible",
     imagenes: [
-      "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800",
-      "https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?w=800",
-      "https://images.unsplash.com/photo-1521369984125-a4ec6c406329?w=800"
+      "https://cdn.wallapop.com/images/10420/lc/ky/__/c10420p1290923293/i6675061380.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/ky/__/c10420p1290923293/i6675061402.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/ky/__/c10420p1290923293/i6675061446.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/ky/__/c10420p1290923293/i6675061411.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/ky/__/c10420p1290923293/i6675061452.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/ky/__/c10420p1290923293/i6675061417.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/ky/__/c10420p1290923293/i6675061432.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/ky/__/c10420p1290923293/i6675061436.jpg?pictureSize=W640"
     ],
-    marca: "Nike",
-    estado: "Como nuevo",
+    marca: "BRIGHT CODES",
+    estado: "Nuevo - Sin estrenar - Con etiquetas",
     talla: "Única (Ajustable)",
-    peso: "120 g",
+    peso: "0 - 1 kg",
     material: "100% Poliéster",
-    entrega: "Envío o en mano",
-    descripcion: "Gorra original Nike Dri-FIT en impecable estado. Visera rígida, broche trasero regulable perfecto. Sin manchas ni descolorido.",
-    linkWallapop: "https://es.wallapop.com",
-    linkVinted: "https://www.vinted.es"
+    entrega: "Envío",
+    descripcion: "¡Estilo urbano impecable con esta gorra snapback negra 'LA' en estado de reestreno! Ideal para amantes de la moda streetwear. Se vende en condiciones excelentes, conservando su pegatina original Bright Codes en la visera. El color negro es intenso y destaca mucho el bordado 'LA' en rojo con borde blanco. Puntos clave: Marca: Bright Codes (con pegatina original). Modelo: Snapback (visera plana). Color: Negro. Detalle: Bordado 3D rojo y blanco 'LA'. Cierre: Ajustable de plástico. Material: 100% poliéster. Estado: Nueva/Sin estrenar. Gorra versátil y de calidad. Interior impecable. Envío rápido y bien protegido. ¡Mira las fotos!",
+    linkWallapop: "https://es.wallapop.com/item/gorra-snapback-la-bright-codes-negra-impecable-1290923293",
+    linkVinted: "https://www.vinted.com/items/8879821115-gorra-snapback-la-azul-marino-nueva-con-etiqueta"
   },
   {
     id: "sudadera-vintage-adidas",
