@@ -3,29 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Studio M | Catálogo</title>
+  <title>Studio M | Catálogo Exclusivo</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Encabezado -->
-  <header>
-    <div class="logo" onclick="mostrarCatalogo()">STUDIO <span>M</span></div>
+  <!-- Navegación -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo" onclick="mostrarCatalogo()">STUDIO <span>M</span></div>
+      <p class="tagline">Resell & Curated Goods</p>
+    </div>
   </header>
 
   <main class="container">
-    <!-- Vista 1: Catálogo principal (Grid) -->
+    <!-- VISTA PRINCIPAL: CATÁLOGO -->
     <section id="catalogo-view">
-      <h1 class="titulo-seccion">Catálogo de Productos</h1>
+      <div class="hero-banner">
+        <h1>Catálogo de Productos</h1>
+        <p>Encuentra prendas y artículos exclusivos. Compra segura vía Wallapop o Vinted.</p>
+      </div>
+
+      <!-- Grid donde se cargan las prendas -->
       <div id="grid-productos" class="grid-productos"></div>
     </section>
 
-    <!-- Vista 2: Detalle del Producto (Oculta por defecto) -->
+    <!-- VISTA DE DETALLE DE PRODUCTO -->
     <section id="detalle-view" class="hidden">
-      <button class="btn-volver" onclick="mostrarCatalogo()">← Volver al catálogo</button>
+      <button class="btn-volver" onclick="mostrarCatalogo()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Volver al catálogo
+      </button>
+      
       <div id="detalle-contenido" class="detalle-container"></div>
     </section>
   </main>
+
+  <footer>
+    <p>© Studio M. Todos los derechos reservados.</p>
+  </footer>
 
   <script src="app.js"></script>
 </body>
