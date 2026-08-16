@@ -21,10 +21,34 @@ const productos = [
     talla: "Única (Ajustable)",
     peso: "0 - 1 kg",
     material: "100% Poliéster",
-    entrega: "Envío",
+    entrega: "Envío o a mano",
     descripcion: "¡Estilo urbano impecable con esta gorra snapback negra 'LA' en estado de reestreno! Ideal para amantes de la moda streetwear. Se vende en condiciones excelentes, conservando su pegatina original Bright Codes en la visera. El color negro es intenso y destaca mucho el bordado 'LA' en rojo con borde blanco. Puntos clave: Marca: Bright Codes (con pegatina original). Modelo: Snapback (visera plana). Color: Negro. Detalle: Bordado 3D rojo y blanco 'LA'. Cierre: Ajustable de plástico. Material: 100% poliéster. Estado: Nueva/Sin estrenar. Gorra versátil y de calidad. Interior impecable. Envío rápido y bien protegido. ¡Mira las fotos!",
     linkWallapop: "https://es.wallapop.com/item/gorra-snapback-la-bright-codes-negra-impecable-1290923293",
     linkVinted: "https://www.vinted.com/items/8879821115-gorra-snapback-la-azul-marino-nueva-con-etiqueta"
+  },
+  {
+    id: "Gorra Snapback 'LA' Bright Codes Negra - Impecable",
+    titulo: "Gorra Snapback 'LA' Bright Codes Negra - Impecable",
+    precio: "8.00€",
+    disponibilidad: "Reservado",
+    imagenes: [
+      "https://cdn.wallapop.com/images/10420/lc/kp/__/c10420p1290911575/i6674996090.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/kp/__/c10420p1290911575/i6674996115.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/kp/__/c10420p1290911575/i6674996124.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/kp/__/c10420p1290911575/i6674996107.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/kp/__/c10420p1290911575/i6674996120.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/kp/__/c10420p1290911575/i6674996100.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/kp/__/c10420p1290911575/i6674996111.jpg?pictureSize=W640"
+    ],
+    marca: "BRIGHT CODES",
+    estado: "Sin Estrenar - Nuevo con etiquetas",
+    talla: "Unica(Ajustable)",
+    peso: "0-1 kg",
+    material: "100% Poliéster",
+    entrega: "Envío o a mano",
+    descripcion: "¡Estilo urbano impecable con esta gorra snapback negra 'LA' en estado de estreno! Ideal para amantes de la moda street. Se vende en excelentes estado, conservando su pegatina original Bright Codes en la visera. El color negro es intenso y el bordado blanco 'LA' está perfecto. Puntos clave: Marca: Bright Codes (con pegatina original). Modelo: Snapback (visera plana). Color: Negro. Detalle: Bordado 3D blanco 'LA' frontal. Cierre: Ajustable de plástico (perfecto estado). Material: 100% poliéster. Estado: Impecable, sin apenas uso. Estilo: Urbano, deportivo, casual. Gorra versátil y de calidad que combina con todo. Envio rapido.",
+    linkWallapop: "https://es.wallapop.com/item/gorra-snapback-la-bright-codes-negra-impecable-1290911575",
+    linkVinted: "https://www.vinted.com/items/9651051132-gorra-snapback-la-bright-codes-negra-impecable"
   },
   {
     id: "sudadera-vintage-adidas",
@@ -44,7 +68,7 @@ const productos = [
     descripcion: "Sudadera Adidas estilo retro con logo bordado en el pecho. Muy cómoda y abrigada, ajuste clásico.",
     linkWallapop: "https://es.wallapop.com",
     linkVinted: "https://www.vinted.es"
-  }
+  },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
