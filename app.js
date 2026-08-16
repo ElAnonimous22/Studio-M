@@ -2,7 +2,7 @@
 // Estado disponible: "Disponible", "Reservado" o "Vendido"
 const productos = [
   {
-    id: "Gorra Snapback LA negra Bright Codes - Sin estrenar",
+    id: "Gorra-LA-negra-roja",
     titulo: "Gorra Snapback LA negra Bright Codes - Sin estrenar",
     precio: "8.00€",
     disponibilidad: "Disponible",
@@ -27,7 +27,7 @@ const productos = [
     linkVinted: "https://www.vinted.com/items/8879821115-gorra-snapback-la-azul-marino-nueva-con-etiqueta"
   },
   {
-    id: "Gorra Snapback 'LA' Bright Codes Negra - Impecable",
+    id: "Gorra-LA-Negra",
     titulo: "Gorra Snapback 'LA' Bright Codes Negra - Impecable",
     precio: "8.00€",
     disponibilidad: "Reservado",
@@ -51,23 +51,27 @@ const productos = [
     linkVinted: "https://www.vinted.com/items/9651051132-gorra-snapback-la-bright-codes-negra-impecable"
   },
   {
-    id: "sudadera-vintage-adidas",
-    titulo: "Sudadera Adidas Originals Retro",
-    precio: "28.00€",
+    id: "Gorra-LA-Beige",
+    titulo: "Gorra Snapback LA Beige – Nueva con Etiqueta",
+    precio: "9.00€",
     disponibilidad: "Reservado",
     imagenes: [
-      "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800",
-      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800"
+      "https://cdn.wallapop.com/images/10420/lc/el/__/c10420p1290625645/i6673203398.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/el/__/c10420p1290625645/i6673203420.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/el/__/c10420p1290625645/i6673203489.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/el/__/c10420p1290625645/i6673203507.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/el/__/c10420p1290625645/i6673203439.jpg?pictureSize=W640",
+      "https://cdn.wallapop.com/images/10420/lc/el/__/c10420p1290625645/i6673203466.jpg?pictureSize=W640"
     ],
-    marca: "Adidas",
-    estado: "Muy bueno",
-    talla: "M",
-    peso: "480 g",
-    material: "80% Algodón, 20% Poliéster",
-    entrega: "Solo envío",
-    descripcion: "Sudadera Adidas estilo retro con logo bordado en el pecho. Muy cómoda y abrigada, ajuste clásico.",
-    linkWallapop: "https://es.wallapop.com",
-    linkVinted: "https://www.vinted.es"
+    marca: "BRIGHT CODES",
+    estado: "Sin estrenar - Nuevo con etiquetas",
+    talla: "Unica(Ajustable)",
+    peso: "0-1 kg",
+    material: "100% Poliéster",
+    entrega: "Envío o en mano",
+    descripcion: "Gorra estilo Los Ángeles ideal para Streetwear en color beige. Totalmente nueva a estrenar, con la pegatina original en la visera y una estructura rígida de gran calidad. Diseño: Bordado frontal "LA" en relieve blanco/plata. Talla: Ajustable (Snapback), talla única para adultos. Material: 100% Poliéster (resistente y fácil de limpiar). Estado: 10/10, nunca usada. Envío: Envío rápido y protegido a través de la plataforma. No realizo entregas en mano por motivos de horario.",
+    linkWallapop: "https://es.wallapop.com/item/gorra-snapback-la-beige-nueva-con-etiqueta-1290625645",
+    linkVinted: "https://www.vinted.com/items/8200899438-gorra-snapback-la-beige-nueva-con-etiqueta"
   },
 ];
 
